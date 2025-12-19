@@ -1,5 +1,11 @@
 # Journal des Prompts
 
+Ce document retrace nos echanges avec l'IA pour la conception et le développement de notre application.
+
+--- 
+
+## Phase 1 : Fondation et strcture du code
+
 ## Prompt 1
 Question : "Je suis étudiant en DEUST Infrastructures Numérique, en seconde année, et je dois créer un analyseur démographique français en Python utilisant l'API Geo Gouv. Peux-tu m'aider à mettre en place la structure de dossiers recommandée par mon énoncé (src/api, src/models, src/cache, src/visualization) et m'expliquer à quoi servira chaque dossier ?"
 Réponse de l'IA : "Pour respecter ton énoncé, voici comment structurer ton projet. Chaque dossier a un rôle précis pour séparer les responsabilités (principe de modularité):"
@@ -95,6 +101,25 @@ if cp:
     else:
         st.error("Aucune donnée trouvée pour ce code postal.")
 
+---
+
+## Phase 2 : Optimisation 
+
+## Prompt 6 :  
+
+Le code pour l'API fonctionne, mais c'est un peu compliqué de manipuler des listes et des dictionnaires tout le temps. Est-ce qu'on peut créer une sorte de 'modèle' dans le dossier models pour que chaque commune soit un objet bien défini ? J'aimerais aussi que le calcul de la densité se fasse tout seul dès qu'on récupère une ville, pour ne pas avoir à réécrire la formule tout le temps.
+
+## Prompt 7 :
+
+Question : Mon système de cache avec le fichier JSON ( Du prompt 4) est un peu lourd. Si je cherche beaucoup de villes, j'ai peur que ça ralentisse l'application. Est-ce qu'il existe une bibliothèque Python qui gère le cache automatiquement pour les requêtes internet sans que j'aie à écrire dans un fichier à la main à chaque fois ? Quelque chose qui garderait les données un jour ou deux par exemple.
+
+## Prompt 8 : 
+
+Question : J'ai essayé d'afficher plein de communes sur la carte Folium, mais on ne voit plus rien quand les points se superposent. Est-ce qu'on peut regrouper les points qui sont proches dans des bulles ? Et aussi, j'ai un souci : l'API me donne [Longitude, Latitude] mais ma carte affiche les villes au mauvais endroit, je crois qu'il faut inverser les deux.
+
+## Prompt 9 : 
+
+Question : Je veux que mon interface Streamlit soit plus complète. Comment je peux faire pour organiser ma page avec des onglets, par exemple : un la carte, un pour les tableaux ? J'aimerais aussi ajouter des graphiques qui bougent quand on passe la souris dessus (pour comparer la taille des villes) et un menu pour que l'utilisateur puisse choisir plusieurs villes et les comparer entre elles
 
 # Analyse critique des réponses de l'IA 
 
