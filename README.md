@@ -31,3 +31,7 @@ streamlit run src/app.py
 - `src/cache`: Gestion du cache
 - `src/visualization`: Fonctions de visualisation (cartes, graphiques)
 - `tests`: Tests unitaires
+
+## Contributeurs
+- Maximilien Lorthios
+- Maxime Verstrepen
