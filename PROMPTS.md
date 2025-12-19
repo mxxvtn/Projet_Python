@@ -8,9 +8,10 @@ Ce document retrace nos echanges avec l'IA pour la conception et le développeme
 
 ## Prompt 1
 Question : "Je suis étudiant en DEUST Infrastructures Numérique, en seconde année, et je dois créer un analyseur démographique français en Python utilisant l'API Geo Gouv. Peux-tu m'aider à mettre en place la structure de dossiers recommandée par mon énoncé (src/api, src/models, src/cache, src/visualization) et m'expliquer à quoi servira chaque dossier ?"
-Réponse de l'IA : "Pour respecter ton énoncé, voici comment structurer ton projet. Chaque dossier a un rôle précis pour séparer les responsabilités (principe de modularité):"
-                    src/api/ : Contiendra la logique brute d'appel aux serveurs de Geo Gouv.
-                    src/models/ : Contiendra tes classes Python (ex: Commune) pour transformer le JSON de l'API en objets manipulables.
+
+Réponse de l'IA : "Pour respecter ton énoncé, voici comment structurer ton projet de manière modulaire (principe de modularité):"
+- src/api/ : Contiendra la logique brute d'appel aux serveurs de Geo Gouv.
+- src/models/ : Contiendra tes classes Python (ex: Commune) pour transformer le JSON de l'API en objets manipulables.
                     src/cache/ : Gérera la sauvegarde locale pour éviter de dépasser les quotas de l'API.
                     src/visualization/ : Regroupera tout ce qui concerne l'affichage des cartes Folium.
 
